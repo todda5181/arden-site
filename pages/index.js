@@ -438,7 +438,11 @@ export default function Home() {
               be in touch promptly.
             </p>
 
-            <form style={styles.form}>
+            <form 
+              action="https://formspree.io/f/YOUR_FORM_ID" 
+              method="POST" 
+              style={styles.form}
+              >
               <div style={styles.formRow} className="form-row">
                 <input
                   type="text"
