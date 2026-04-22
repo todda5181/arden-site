@@ -438,7 +438,7 @@ export default function Home() {
               be in touch promptly.
             </p>
 
-            <form
+  <form
   action="https://formspree.io/f/mzdykgry"
   method="POST"
   style={styles.form}
@@ -447,6 +447,11 @@ export default function Home() {
     type="hidden"
     name="_subject"
     value="New Private Estate Inquiry – Arden"
+  />
+  <input
+    type="hidden"
+    name="_next"
+    value="https://arden-site-iota.vercel.app/thank-you"
   />
 
   <div style={styles.formRow} className="form-row">
