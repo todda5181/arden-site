@@ -438,52 +438,66 @@ export default function Home() {
               be in touch promptly.
             </p>
 
-            <form 
-              action="https://formspree.io/f/mzdykgry"
-              method="POST" 
-              style={styles.form}
-              >
-              <div style={styles.formRow} className="form-row">
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  style={styles.input}
-                  className="input-field"
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  style={styles.input}
-                  className="input-field"
-                />
-              </div>
+            <form
+  action="https://formspree.io/f/mzdykgry"
+  method="POST"
+  style={styles.form}
+>
+  <input
+    type="hidden"
+    name="_subject"
+    value="New Private Estate Inquiry – Arden"
+  />
 
-              <div style={styles.formRow} className="form-row">
-                <input
-                  type="text"
-                  placeholder="Phone Number"
-                  style={styles.input}
-                  className="input-field"
-                />
-                <input
-                  type="text"
-                  placeholder="Property Location"
-                  style={styles.input}
-                  className="input-field"
-                />
-              </div>
+  <div style={styles.formRow} className="form-row">
+    <input
+      type="text"
+      name="fullName"
+      placeholder="Full Name"
+      style={styles.input}
+      className="input-field"
+      required
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      style={styles.input}
+      className="input-field"
+      required
+    />
+  </div>
 
-              <textarea
-                placeholder="How can we help?"
-                rows={5}
-                style={styles.textarea}
-                className="text-area"
-              />
+  <div style={styles.formRow} className="form-row">
+    <input
+      type="text"
+      name="phone"
+      placeholder="Phone Number"
+      style={styles.input}
+      className="input-field"
+    />
+    <input
+      type="text"
+      name="propertyLocation"
+      placeholder="Property Location"
+      style={styles.input}
+      className="input-field"
+    />
+  </div>
 
-              <button type="submit" style={styles.primaryButton} className="primary-btn">
-                Submit Request
-              </button>
-            </form>
+  <textarea
+    name="message"
+    placeholder="How can we help?"
+    rows={5}
+    style={styles.textarea}
+    className="text-area"
+    required
+  />
+
+  <button type="submit" style={styles.primaryButton} className="primary-btn">
+    Submit Request
+  </button>
+</form>
           </div>
         </section>
 
