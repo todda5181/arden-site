@@ -41,47 +41,269 @@ export default function Home() {
 
   return (
     <>
-      <div style={styles.page}>
-        <header style={styles.header}>
+      <style>{`
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          margin: 0;
+          background: #050505;
+          color: #f4eee3;
+          font-family: Georgia, "Times New Roman", serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        a, button, input, textarea {
+          transition: all 180ms ease;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+          color: rgba(244, 238, 227, 0.42);
+        }
+
+        @keyframes fadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(22px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slowZoom {
+          from {
+            transform: scale(1.03);
+          }
+          to {
+            transform: scale(1);
+          }
+        }
+
+        .fade-up {
+          animation: fadeUp 0.9s ease forwards;
+        }
+
+        .delay-1 {
+          animation-delay: 0.08s;
+        }
+
+        .delay-2 {
+          animation-delay: 0.16s;
+        }
+
+        .delay-3 {
+          animation-delay: 0.24s;
+        }
+
+        .delay-4 {
+          animation-delay: 0.32s;
+        }
+
+        .hero-image-animate {
+          animation: slowZoom 1.6s ease forwards;
+        }
+
+        .nav-link:hover {
+          color: #c6a46c !important;
+        }
+
+        .header-btn:hover,
+        .secondary-btn:hover {
+          background: rgba(198, 164, 108, 0.1) !important;
+          transform: translateY(-1px);
+        }
+
+        .primary-btn:hover {
+          opacity: 0.92;
+          transform: translateY(-1px);
+        }
+
+        .service-card:hover {
+          background: rgba(255,255,255,0.015);
+        }
+
+        .input-field:focus,
+        .text-area:focus {
+          border-color: #c6a46c !important;
+          box-shadow: 0 0 0 1px rgba(198,164,108,0.25);
+        }
+
+        .footer-link:hover {
+          color: #c6a46c !important;
+        }
+
+        @media (max-width: 1200px) {
+          .header-grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            gap: 18px;
+            text-align: center;
+          }
+
+          .hero-grid,
+          .about-grid,
+          .contact-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .hero-copy {
+            padding: 56px 0 36px 0 !important;
+          }
+
+          .about-copy {
+            padding: 56px 0 !important;
+          }
+
+          .services-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+
+          .approach-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .hero-title {
+            font-size: 58px !important;
+          }
+
+          .section-title {
+            font-size: 52px !important;
+          }
+
+          .quote-text {
+            font-size: 28px !important;
+          }
+        }
+
+        @media (max-width: 760px) {
+          .page-shell {
+            padding: 18px 18px 40px !important;
+          }
+
+          .logo-img {
+            width: 180px !important;
+          }
+
+          .nav-wrap {
+            gap: 16px !important;
+          }
+
+          .hero-title {
+            font-size: 42px !important;
+          }
+
+          .hero-text {
+            font-size: 20px !important;
+          }
+
+          .section-title {
+            font-size: 40px !important;
+          }
+
+          .section-text {
+            font-size: 18px !important;
+          }
+
+          .quote-section {
+            padding: 44px 20px !important;
+          }
+
+          .quote-text {
+            font-size: 22px !important;
+          }
+
+          .services-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .form-row {
+            grid-template-columns: 1fr !important;
+          }
+
+          .hero-actions {
+            flex-direction: column;
+            align-items: stretch;
+          }
+
+          .primary-btn,
+          .secondary-btn {
+            width: 100%;
+            text-align: center;
+          }
+        }
+      `}</style>
+
+      <div style={styles.page} className="page-shell">
+        <div style={styles.pageGlowTop} />
+        <div style={styles.pageGlowBottom} />
+
+        <header style={styles.header} className="header-grid">
           <div style={styles.logoWrap}>
-            <img src="/logo.png" alt="Arden Estate Concierge" style={styles.logo} />
+            <img
+              src="/logo.png"
+              alt="Arden Estate Concierge"
+              style={styles.logo}
+              className="logo-img fade-up"
+            />
           </div>
 
-          <nav style={styles.nav}>
+          <nav style={styles.nav} className="nav-wrap fade-up delay-1">
             {navItems.map((item) => (
-              <a key={item.label} href={item.href} style={styles.navLink}>
+              <a
+                key={item.label}
+                href={item.href}
+                style={styles.navLink}
+                className="nav-link"
+              >
                 {item.label}
               </a>
             ))}
           </nav>
 
-          <a href="#contact" style={styles.headerButton}>
+          <a
+            href="#contact"
+            style={styles.headerButton}
+            className="header-btn fade-up delay-2"
+          >
             Request Private Assessment
           </a>
         </header>
 
-        <section style={styles.hero}>
-          <div style={styles.heroContent}>
-            <div style={styles.kicker}>Private Estate Oversight</div>
+        <section style={styles.hero} className="hero-grid">
+          <div style={styles.heroContent} className="hero-copy">
+            <div style={styles.kicker} className="fade-up">
+              Private Estate Oversight
+            </div>
 
-            <h1 style={styles.heroTitle}>
+            <h1 style={styles.heroTitle} className="hero-title fade-up delay-1">
               Everything Handled.
               <br />
               Nothing Overlooked.
             </h1>
 
-            <div style={styles.heroDivider} />
+            <div style={styles.heroDivider} className="fade-up delay-2" />
 
-            <p style={styles.heroText}>
+            <p style={styles.heroText} className="hero-text fade-up delay-3">
               Arden provides discreet, comprehensive oversight for exceptional
               homes and the people who own them.
             </p>
 
-            <div style={styles.heroActions}>
-              <a href="#contact" style={styles.primaryButton}>
+            <div style={styles.heroActions} className="hero-actions fade-up delay-4">
+              <a href="#contact" style={styles.primaryButton} className="primary-btn">
                 Request Private Assessment
               </a>
-              <a href="#services" style={styles.secondaryButton}>
+              <a
+                href="#services"
+                style={styles.secondaryButton}
+                className="secondary-btn"
+              >
                 Explore Services
               </a>
             </div>
@@ -92,6 +314,7 @@ export default function Home() {
               src="/hero-estate.jpg"
               alt="Luxury estate exterior"
               style={styles.heroImage}
+              className="hero-image-animate"
             />
             <div style={styles.heroImageOverlay} />
           </div>
@@ -102,9 +325,9 @@ export default function Home() {
             Tailored Oversight. Total Peace of Mind.
           </div>
 
-          <div style={styles.servicesGrid}>
+          <div style={styles.servicesGrid} className="services-grid">
             {services.map((service) => (
-              <div key={service.title} style={styles.serviceCard}>
+              <div key={service.title} style={styles.serviceCard} className="service-card">
                 <div style={styles.serviceIcon}>{service.icon}</div>
                 <h3 style={styles.serviceTitle}>{service.title}</h3>
                 <p style={styles.serviceText}>{service.description}</p>
@@ -113,11 +336,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" style={styles.aboutSection}>
-          <div style={styles.aboutTextCol}>
+        <section id="about" style={styles.aboutSection} className="about-grid">
+          <div style={styles.aboutTextCol} className="about-copy">
             <div style={styles.sectionKicker}>Discreet. Reliable. Exceptional.</div>
 
-            <h2 style={styles.sectionTitle}>
+            <h2 style={styles.sectionTitle} className="section-title">
               Your Property.
               <br />
               Our Priority.
@@ -125,19 +348,19 @@ export default function Home() {
 
             <div style={styles.smallDivider} />
 
-            <p style={styles.sectionText}>
+            <p style={styles.sectionText} className="section-text">
               Arden is more than a service—it is a standard of care. We
               anticipate needs, solve problems before they arise, and protect
               your investment with composure, consistency, and discretion.
             </p>
 
-            <p style={styles.sectionText}>
+            <p style={styles.sectionText} className="section-text">
               Whether you are in residence, away for the season, or simply
               unwilling to spend time managing details, Arden ensures your home
               is always maintained to a level worthy of its value.
             </p>
 
-            <a href="#approach" style={styles.secondaryButton}>
+            <a href="#approach" style={styles.secondaryButton} className="secondary-btn">
               Learn Our Approach
             </a>
           </div>
@@ -155,7 +378,7 @@ export default function Home() {
           <div style={styles.approachInner}>
             <div style={styles.sectionKickerCentered}>The Arden Standard</div>
 
-            <div style={styles.approachGrid}>
+            <div style={styles.approachGrid} className="approach-grid">
               <div style={styles.approachItem}>
                 <div style={styles.approachNumber}>01</div>
                 <h3 style={styles.approachTitle}>Private Assessment</h3>
@@ -186,16 +409,16 @@ export default function Home() {
           </div>
         </section>
 
-        <section style={styles.quoteSection}>
+        <section style={styles.quoteSection} className="quote-section">
           <div style={styles.quoteMark}>“</div>
-          <p style={styles.quoteText}>
+          <p style={styles.quoteText} className="quote-text">
             Arden gives us complete peace of mind. Our home is always perfect,
             our guests are always impressed, and we know everything is handled.
           </p>
           <div style={styles.quoteAttribution}>Private Client, Great Falls, VA</div>
         </section>
 
-        <section id="contact" style={styles.contactSection}>
+        <section id="contact" style={styles.contactSection} className="contact-grid">
           <div style={styles.contactBrandPanel}>
             <img src="/logo.png" alt="Arden logo" style={styles.contactLogo} />
             <div style={styles.contactBrandText}>
@@ -216,23 +439,44 @@ export default function Home() {
             </p>
 
             <form style={styles.form}>
-              <div style={styles.formRow}>
-                <input type="text" placeholder="Full Name" style={styles.input} />
-                <input type="email" placeholder="Email Address" style={styles.input} />
+              <div style={styles.formRow} className="form-row">
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  style={styles.input}
+                  className="input-field"
+                />
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  style={styles.input}
+                  className="input-field"
+                />
               </div>
 
-              <div style={styles.formRow}>
-                <input type="text" placeholder="Phone Number" style={styles.input} />
-                <input type="text" placeholder="Property Location" style={styles.input} />
+              <div style={styles.formRow} className="form-row">
+                <input
+                  type="text"
+                  placeholder="Phone Number"
+                  style={styles.input}
+                  className="input-field"
+                />
+                <input
+                  type="text"
+                  placeholder="Property Location"
+                  style={styles.input}
+                  className="input-field"
+                />
               </div>
 
               <textarea
                 placeholder="How can we help?"
                 rows={5}
                 style={styles.textarea}
+                className="text-area"
               />
 
-              <button type="submit" style={styles.primaryButton}>
+              <button type="submit" style={styles.primaryButton} className="primary-btn">
                 Submit Request
               </button>
             </form>
@@ -240,12 +484,14 @@ export default function Home() {
         </section>
 
         <footer style={styles.footer}>
-          <div style={styles.footerLeft}>© 2026 Arden Estate Concierge. All rights reserved.</div>
+          <div style={styles.footerLeft}>
+            © 2026 Arden Estate Concierge. All rights reserved.
+          </div>
           <div style={styles.footerRight}>
-            <a href="#" style={styles.footerLink}>
+            <a href="#" style={styles.footerLink} className="footer-link">
               Privacy Policy
             </a>
-            <a href="#" style={styles.footerLink}>
+            <a href="#" style={styles.footerLink} className="footer-link">
               Terms of Service
             </a>
           </div>
@@ -257,14 +503,39 @@ export default function Home() {
 
 const styles = {
   page: {
-    backgroundColor: "#050505",
+    position: "relative",
+    background:
+      "linear-gradient(180deg, #050505 0%, #080808 35%, #050505 100%)",
     color: "#F4EEE3",
     minHeight: "100vh",
     fontFamily: 'Georgia, "Times New Roman", serif',
     padding: "24px 32px 48px",
+    overflow: "hidden",
+  },
+
+  pageGlowTop: {
+    position: "absolute",
+    top: "-140px",
+    left: "-120px",
+    width: "420px",
+    height: "420px",
+    background: "radial-gradient(circle, rgba(198,164,108,0.14) 0%, rgba(198,164,108,0) 70%)",
+    pointerEvents: "none",
+  },
+
+  pageGlowBottom: {
+    position: "absolute",
+    bottom: "-180px",
+    right: "-120px",
+    width: "440px",
+    height: "440px",
+    background: "radial-gradient(circle, rgba(198,164,108,0.1) 0%, rgba(198,164,108,0) 70%)",
+    pointerEvents: "none",
   },
 
   header: {
+    position: "relative",
+    zIndex: 2,
     maxWidth: "1400px",
     margin: "0 auto",
     display: "grid",
@@ -272,7 +543,7 @@ const styles = {
     alignItems: "center",
     gap: "24px",
     paddingBottom: "24px",
-    borderBottom: "1px solid rgba(198,164,108,0.22)",
+    borderBottom: "1px solid rgba(198,164,108,0.18)",
   },
 
   logoWrap: {
@@ -281,9 +552,10 @@ const styles = {
   },
 
   logo: {
-    width: "180px",
+    width: "220px",
     height: "auto",
     objectFit: "contain",
+    filter: "drop-shadow(0 8px 30px rgba(198,164,108,0.12))",
   },
 
   nav: {
@@ -296,35 +568,38 @@ const styles = {
   navLink: {
     color: "#F4EEE3",
     textDecoration: "none",
-    fontSize: "14px",
-    letterSpacing: "2px",
+    fontSize: "13px",
+    letterSpacing: "2.2px",
     textTransform: "uppercase",
-    opacity: 0.92,
+    opacity: 0.9,
   },
 
   headerButton: {
     textDecoration: "none",
     color: "#C6A46C",
-    border: "1px solid #C6A46C",
+    border: "1px solid rgba(198,164,108,0.8)",
     padding: "14px 20px",
-    fontSize: "13px",
-    letterSpacing: "1.5px",
+    fontSize: "12px",
+    letterSpacing: "1.8px",
     textTransform: "uppercase",
     display: "inline-block",
     whiteSpace: "nowrap",
+    background: "rgba(255,255,255,0.01)",
   },
 
   hero: {
+    position: "relative",
+    zIndex: 2,
     maxWidth: "1400px",
     margin: "0 auto",
     display: "grid",
-    gridTemplateColumns: "1.05fr 1.25fr",
-    minHeight: "700px",
-    borderBottom: "1px solid rgba(198,164,108,0.18)",
+    gridTemplateColumns: "1.02fr 1.28fr",
+    minHeight: "740px",
+    borderBottom: "1px solid rgba(198,164,108,0.14)",
   },
 
   heroContent: {
-    padding: "80px 48px 80px 8px",
+    padding: "88px 56px 88px 4px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -334,31 +609,35 @@ const styles = {
     color: "#C6A46C",
     textTransform: "uppercase",
     letterSpacing: "4px",
-    fontSize: "13px",
+    fontSize: "12px",
     marginBottom: "22px",
+    opacity: 0.95,
   },
 
   heroTitle: {
-    fontSize: "78px",
-    lineHeight: 1.02,
+    fontSize: "84px",
+    lineHeight: 0.98,
     fontWeight: 400,
+    letterSpacing: "-1.5px",
     margin: 0,
-    maxWidth: "620px",
+    maxWidth: "640px",
+    textShadow: "0 8px 30px rgba(0,0,0,0.25)",
   },
 
   heroDivider: {
-    width: "120px",
+    width: "132px",
     height: "2px",
     backgroundColor: "#C6A46C",
     marginTop: "34px",
     marginBottom: "34px",
+    boxShadow: "0 0 18px rgba(198,164,108,0.25)",
   },
 
   heroText: {
-    fontSize: "30px",
+    fontSize: "31px",
     lineHeight: 1.45,
     maxWidth: "560px",
-    color: "rgba(244,238,227,0.9)",
+    color: "rgba(244,238,227,0.88)",
     margin: 0,
   },
 
@@ -366,38 +645,40 @@ const styles = {
     display: "flex",
     gap: "16px",
     flexWrap: "wrap",
-    marginTop: "40px",
+    marginTop: "42px",
   },
 
   primaryButton: {
-    backgroundColor: "#C6A46C",
+    background: "linear-gradient(180deg, #cfb27a 0%, #b7904d 100%)",
     color: "#111111",
     textDecoration: "none",
     border: "none",
     padding: "16px 26px",
-    fontSize: "13px",
-    letterSpacing: "1.5px",
+    fontSize: "12px",
+    letterSpacing: "1.8px",
     textTransform: "uppercase",
     cursor: "pointer",
     display: "inline-block",
+    boxShadow: "0 10px 30px rgba(183,144,77,0.18)",
   },
 
   secondaryButton: {
     backgroundColor: "transparent",
     color: "#C6A46C",
     textDecoration: "none",
-    border: "1px solid #C6A46C",
+    border: "1px solid rgba(198,164,108,0.8)",
     padding: "16px 26px",
-    fontSize: "13px",
-    letterSpacing: "1.5px",
+    fontSize: "12px",
+    letterSpacing: "1.8px",
     textTransform: "uppercase",
     display: "inline-block",
   },
 
   heroImagePanel: {
     position: "relative",
-    minHeight: "700px",
+    minHeight: "740px",
     overflow: "hidden",
+    borderLeft: "1px solid rgba(198,164,108,0.1)",
   },
 
   heroImage: {
@@ -411,14 +692,16 @@ const styles = {
     position: "absolute",
     inset: 0,
     background:
-      "linear-gradient(90deg, rgba(5,5,5,0.35) 0%, rgba(5,5,5,0.05) 30%, rgba(5,5,5,0.12) 100%)",
+      "linear-gradient(90deg, rgba(5,5,5,0.42) 0%, rgba(5,5,5,0.1) 30%, rgba(5,5,5,0.2) 100%)",
   },
 
   servicesSection: {
+    position: "relative",
+    zIndex: 2,
     maxWidth: "1400px",
     margin: "0 auto",
-    padding: "48px 0 32px",
-    borderBottom: "1px solid rgba(198,164,108,0.18)",
+    padding: "52px 0 34px",
+    borderBottom: "1px solid rgba(198,164,108,0.14)",
   },
 
   sectionKickerCentered: {
@@ -426,7 +709,7 @@ const styles = {
     color: "#C6A46C",
     textTransform: "uppercase",
     letterSpacing: "4px",
-    fontSize: "16px",
+    fontSize: "15px",
     marginBottom: "34px",
   },
 
@@ -437,9 +720,10 @@ const styles = {
   },
 
   serviceCard: {
-    padding: "28px 22px 18px",
+    padding: "32px 22px 20px",
     textAlign: "center",
-    borderLeft: "1px solid rgba(198,164,108,0.16)",
+    borderLeft: "1px solid rgba(198,164,108,0.12)",
+    background: "transparent",
   },
 
   serviceIcon: {
@@ -447,6 +731,7 @@ const styles = {
     fontSize: "42px",
     lineHeight: 1,
     marginBottom: "18px",
+    textShadow: "0 0 18px rgba(198,164,108,0.16)",
   },
 
   serviceTitle: {
@@ -458,22 +743,24 @@ const styles = {
 
   serviceText: {
     fontSize: "17px",
-    lineHeight: 1.65,
-    color: "rgba(244,238,227,0.78)",
+    lineHeight: 1.68,
+    color: "rgba(244,238,227,0.75)",
     margin: 0,
   },
 
   aboutSection: {
+    position: "relative",
+    zIndex: 2,
     maxWidth: "1400px",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "0.9fr 1.1fr",
     alignItems: "stretch",
-    borderBottom: "1px solid rgba(198,164,108,0.18)",
+    borderBottom: "1px solid rgba(198,164,108,0.14)",
   },
 
   aboutTextCol: {
-    padding: "70px 40px 70px 8px",
+    padding: "74px 40px 74px 4px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -483,36 +770,39 @@ const styles = {
     color: "#C6A46C",
     textTransform: "uppercase",
     letterSpacing: "4px",
-    fontSize: "13px",
+    fontSize: "12px",
     marginBottom: "22px",
   },
 
   sectionTitle: {
-    fontSize: "68px",
-    lineHeight: 1.03,
+    fontSize: "72px",
+    lineHeight: 1.01,
     fontWeight: 400,
     margin: 0,
+    letterSpacing: "-1px",
   },
 
   smallDivider: {
-    width: "90px",
+    width: "92px",
     height: "2px",
     backgroundColor: "#C6A46C",
     marginTop: "28px",
     marginBottom: "28px",
+    boxShadow: "0 0 18px rgba(198,164,108,0.25)",
   },
 
   sectionText: {
     fontSize: "23px",
-    lineHeight: 1.6,
-    color: "rgba(244,238,227,0.84)",
+    lineHeight: 1.62,
+    color: "rgba(244,238,227,0.82)",
     marginTop: 0,
     marginBottom: "18px",
     maxWidth: "560px",
   },
 
   aboutImageCol: {
-    minHeight: "560px",
+    minHeight: "580px",
+    borderLeft: "1px solid rgba(198,164,108,0.1)",
   },
 
   aboutImage: {
@@ -523,10 +813,12 @@ const styles = {
   },
 
   approachSection: {
+    position: "relative",
+    zIndex: 2,
     maxWidth: "1400px",
     margin: "0 auto",
-    padding: "56px 0 24px",
-    borderBottom: "1px solid rgba(198,164,108,0.18)",
+    padding: "58px 0 26px",
+    borderBottom: "1px solid rgba(198,164,108,0.14)",
   },
 
   approachInner: {
@@ -536,7 +828,7 @@ const styles = {
   approachGrid: {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "30px",
+    gap: "28px",
   },
 
   approachItem: {
@@ -558,19 +850,21 @@ const styles = {
 
   approachText: {
     fontSize: "19px",
-    lineHeight: 1.7,
-    color: "rgba(244,238,227,0.78)",
+    lineHeight: 1.72,
+    color: "rgba(244,238,227,0.75)",
     margin: 0,
   },
 
   quoteSection: {
+    position: "relative",
+    zIndex: 2,
     maxWidth: "1400px",
     margin: "0 auto",
     textAlign: "center",
-    padding: "60px 120px",
-    borderBottom: "1px solid rgba(198,164,108,0.18)",
+    padding: "68px 120px",
+    borderBottom: "1px solid rgba(198,164,108,0.14)",
     background:
-      "linear-gradient(180deg, rgba(18,18,18,0.35) 0%, rgba(5,5,5,0.55) 100%)",
+      "linear-gradient(180deg, rgba(255,255,255,0.015) 0%, rgba(255,255,255,0.005) 100%)",
   },
 
   quoteMark: {
@@ -581,8 +875,8 @@ const styles = {
   },
 
   quoteText: {
-    fontSize: "34px",
-    lineHeight: 1.45,
+    fontSize: "35px",
+    lineHeight: 1.48,
     fontStyle: "italic",
     maxWidth: "980px",
     margin: "0 auto 16px",
@@ -593,21 +887,24 @@ const styles = {
     color: "#C6A46C",
     textTransform: "uppercase",
     letterSpacing: "3px",
-    fontSize: "13px",
+    fontSize: "12px",
   },
 
   contactSection: {
+    position: "relative",
+    zIndex: 2,
     maxWidth: "1400px",
-    margin: "0 auto",
+    margin: "40px auto 0",
     display: "grid",
     gridTemplateColumns: "0.9fr 1.2fr",
-    border: "1px solid rgba(198,164,108,0.28)",
-    marginTop: "40px",
+    border: "1px solid rgba(198,164,108,0.24)",
+    background: "rgba(255,255,255,0.015)",
+    boxShadow: "0 20px 60px rgba(0,0,0,0.22)",
   },
 
   contactBrandPanel: {
-    padding: "54px 36px",
-    borderRight: "1px solid rgba(198,164,108,0.18)",
+    padding: "56px 36px",
+    borderRight: "1px solid rgba(198,164,108,0.14)",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -616,34 +913,35 @@ const styles = {
   },
 
   contactLogo: {
-    width: "220px",
+    width: "250px",
     height: "auto",
-    marginBottom: "26px",
+    marginBottom: "28px",
+    filter: "drop-shadow(0 8px 30px rgba(198,164,108,0.12))",
   },
 
   contactBrandText: {
     fontSize: "20px",
     lineHeight: 1.6,
-    color: "rgba(244,238,227,0.82)",
+    color: "rgba(244,238,227,0.8)",
     marginBottom: "28px",
   },
 
   contactTagline: {
     color: "#C6A46C",
-    fontSize: "29px",
+    fontSize: "30px",
     lineHeight: 1.5,
     fontStyle: "italic",
   },
 
   contactFormPanel: {
-    padding: "50px 42px",
+    padding: "52px 42px",
   },
 
   contactIntro: {
     fontSize: "21px",
-    lineHeight: 1.6,
+    lineHeight: 1.62,
     maxWidth: "650px",
-    color: "rgba(244,238,227,0.82)",
+    color: "rgba(244,238,227,0.8)",
     marginTop: 0,
     marginBottom: "26px",
   },
@@ -661,8 +959,8 @@ const styles = {
   },
 
   input: {
-    backgroundColor: "transparent",
-    border: "1px solid rgba(198,164,108,0.28)",
+    backgroundColor: "rgba(255,255,255,0.01)",
+    border: "1px solid rgba(198,164,108,0.24)",
     color: "#F4EEE3",
     padding: "16px 14px",
     fontSize: "16px",
@@ -670,8 +968,8 @@ const styles = {
   },
 
   textarea: {
-    backgroundColor: "transparent",
-    border: "1px solid rgba(198,164,108,0.28)",
+    backgroundColor: "rgba(255,255,255,0.01)",
+    border: "1px solid rgba(198,164,108,0.24)",
     color: "#F4EEE3",
     padding: "16px 14px",
     fontSize: "16px",
@@ -681,6 +979,8 @@ const styles = {
   },
 
   footer: {
+    position: "relative",
+    zIndex: 2,
     maxWidth: "1400px",
     margin: "26px auto 0",
     display: "flex",
@@ -688,7 +988,7 @@ const styles = {
     alignItems: "center",
     gap: "20px",
     flexWrap: "wrap",
-    color: "rgba(244,238,227,0.66)",
+    color: "rgba(244,238,227,0.6)",
     fontSize: "14px",
     paddingTop: "8px",
   },
@@ -702,7 +1002,7 @@ const styles = {
   },
 
   footerLink: {
-    color: "rgba(244,238,227,0.66)",
+    color: "rgba(244,238,227,0.6)",
     textDecoration: "none",
   },
 };
