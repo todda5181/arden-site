@@ -1,3 +1,4 @@
+import React from "react";
 export default function Home() {
   const navItems = [
     { label: "Services", href: "#services" },
@@ -438,7 +439,7 @@ export default function Home() {
               be in touch promptly.
             </p>
 
-  <form
+  <<ContactForm />
   action="https://formspree.io/f/mzdykgry"
   method="POST"
   style={styles.form}
@@ -1024,8 +1025,42 @@ const styles = {
     flexWrap: "wrap",
   },
 
-  footerLink: {
-    color: "rgba(244,238,227,0.6)",
-    textDecoration: "none",
-  },
+footerLink: {
+  color: "rgba(244,238,227,0.6)",
+  textDecoration: "none",
+},
+
+// 👇 ADD THESE RIGHT HERE
+successBox: {
+  textAlign: "center",
+  padding: "40px 20px",
+  border: "1px solid rgba(198,164,108,0.25)",
+  background: "rgba(255,255,255,0.02)",
+},
+
+successKicker: {
+  color: "#C6A46C",
+  textTransform: "uppercase",
+  letterSpacing: "3px",
+  fontSize: "12px",
+  marginBottom: "16px",
+},
+
+successTitle: {
+  fontSize: "48px",
+  marginBottom: "16px",
+},
+
+successDivider: {
+  width: "80px",
+  height: "2px",
+  backgroundColor: "#C6A46C",
+  margin: "0 auto 20px",
+},
+
+successText: {
+  fontSize: "20px",
+  color: "rgba(244,238,227,0.8)",
+},
+
 };
