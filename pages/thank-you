@@ -1,0 +1,110 @@
+export default function ThankYou() {
+  return (
+    <>
+      <style>{`
+        body {
+          margin: 0;
+          background: #050505;
+          color: #f4eee3;
+          font-family: Georgia, "Times New Roman", serif;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        .wrap {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 24px;
+          background:
+            radial-gradient(circle at top left, rgba(198,164,108,0.12), transparent 35%),
+            radial-gradient(circle at bottom right, rgba(198,164,108,0.08), transparent 35%),
+            linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
+        }
+
+        .card {
+          width: 100%;
+          max-width: 760px;
+          border: 1px solid rgba(198,164,108,0.22);
+          background: rgba(255,255,255,0.02);
+          box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+          padding: 56px 40px;
+          text-align: center;
+        }
+
+        .kicker {
+          color: #c6a46c;
+          text-transform: uppercase;
+          letter-spacing: 4px;
+          font-size: 12px;
+          margin-bottom: 20px;
+        }
+
+        h1 {
+          margin: 0 0 20px;
+          font-size: 56px;
+          line-height: 1.02;
+          font-weight: 400;
+        }
+
+        p {
+          margin: 0 auto 28px;
+          max-width: 580px;
+          font-size: 22px;
+          line-height: 1.65;
+          color: rgba(244,238,227,0.82);
+        }
+
+        .divider {
+          width: 90px;
+          height: 2px;
+          background: #c6a46c;
+          margin: 0 auto 28px;
+        }
+
+        .btn {
+          display: inline-block;
+          text-decoration: none;
+          background: linear-gradient(180deg, #cfb27a 0%, #b7904d 100%);
+          color: #111;
+          padding: 16px 26px;
+          font-size: 12px;
+          letter-spacing: 1.8px;
+          text-transform: uppercase;
+        }
+
+        @media (max-width: 760px) {
+          .card {
+            padding: 40px 24px;
+          }
+
+          h1 {
+            font-size: 40px;
+          }
+
+          p {
+            font-size: 18px;
+          }
+        }
+      `}</style>
+
+      <div className="wrap">
+        <div className="card">
+          <div className="kicker">Arden Estate Concierge</div>
+          <h1>Thank You.</h1>
+          <div className="divider" />
+          <p>
+            Your private assessment request has been received. A member of our
+            team will be in touch shortly.
+          </p>
+          <a href="/" className="btn">
+            Return Home
+          </a>
+        </div>
+      </div>
+    </>
+  );
+}
