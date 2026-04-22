@@ -1,4 +1,112 @@
-import React from "react";
+import { useState } from "react";
+function ContactForm() {
+  const [status, setStatus] = useState("idle");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    const formData = new FormData(e.target);
+
+    const response = await fetch("https://formspree.io/f/mzdykgry", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      setStatus("success");
+      e.target.reset();
+    } else {
+      setStatus("error");
+    }
+  };
+
+  if (status === "success") {
+    return (
+      <div style={styles.successBox}>
+        <div style={styles.successKicker}>Request Received</div>
+        <div style={styles.successTitle}>Thank You.</div>
+        <div style={styles.successDivider} />
+        <p style={styles.successText}>
+          Your private assessment request has been received. A member of our
+          team will contact you shortly.
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} style={styles.form}>
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Private Estate Inquiry – Arden"
+      />
+
+      <div style={styles.formRow} className="form-row">
+        <input
+          type="text"
+          name="fullName"
+          placeholder="Full Name"
+          style={styles.input}
+          className="input-field"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email Address"
+          style={styles.input}
+          className="input-field"
+          required
+        />
+      </div>
+
+      <div style={styles.formRow} className="form-row">
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone Number"
+          style={styles.input}
+          className="input-field"
+        />
+        <input
+          type="text"
+          name="propertyLocation"
+          placeholder="Property Location"
+          style={styles.input}
+          className="input-field"
+        />
+      </div>
+
+      <textarea
+        name="message"
+        placeholder="How can we help?"
+        rows={5}
+        style={styles.textarea}
+        className="text-area"
+        required
+      />
+
+      <button
+        type="submit"
+        style={styles.primaryButton}
+        className="primary-btn"
+      >
+        {status === "loading" ? "Submitting..." : "Submit Request"}
+      </button>
+
+      {status === "error" && (
+        <p style={{ color: "#C6A46C", marginTop: "16px" }}>
+          Something went wrong. Please try again.
+        </p>
+      )}
+    </form>
+  );
+}
 export default function Home() {
   const navItems = [
     { label: "Services", href: "#services" },
@@ -503,7 +611,7 @@ export default function Home() {
   <button type="submit" style={styles.primaryButton} className="primary-btn">
     Submit Request
   </button>
-</form>
+  <<ContactForm />
           </div>
         </section>
 
