@@ -26,7 +26,7 @@ function ContactForm() {
 
   if (status === "success") {
     return (
-      <div style={styles.successBox}>
+      <div style={{ ...styles.successBox, animation: "fadeIn 0.8s ease forwards" }}>
         <div style={styles.successKicker}>Request Received</div>
         <div style={styles.successTitle}>Thank You.</div>
         <div style={styles.successDivider} />
@@ -569,6 +569,39 @@ export default function Home() {
     </>
   );
 }
+
+const globalStyles = `
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.primary-btn {
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(198,164,108,0.25);
+}
+`;
 
 const styles = {
   page: {
