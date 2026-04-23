@@ -649,10 +649,11 @@ const globalStyles = `
 }
 
 .primary-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(198,164,108,0.25);
+  transform: translateY(-2px) scale(1.01);
+  box-shadow:
+    0 12px 30px rgba(198,164,108,0.22),
+    0 0 18px rgba(198,164,108,0.18);
 }
-`;
 
 const styles = {
   page: {
