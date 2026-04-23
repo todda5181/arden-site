@@ -109,25 +109,34 @@ function ContactForm() {
 }
 export default function Home() {
   const navItems = [
-    React.useEffect(() => {
-  const elements = document.querySelectorAll(".reveal");
+    { label: "Services", href: "#services" },
+    { label: "About", href: "#about" },
+    { label: "Approach", href: "#approach" },
+    { label: "Contact", href: "#contact" },
+  ];
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+  React.useEffect(() => {
+    const elements = document.querySelectorAll(".reveal");
 
-  elements.forEach((el) => observer.observe(el));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
 
-return () => {
-  observer.disconnect();
-};
+    elements.forEach((el) => observer.observe(el));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
     { label: "Services", href: "#services" },
     { label: "About", href: "#about" },
     { label: "Approach", href: "#approach" },
