@@ -125,8 +125,9 @@ export default function Home() {
 
   elements.forEach((el) => observer.observe(el));
 
-  return () => observer.disconnect();
-}, []);
+return () => {
+  observer.disconnect();
+};
     { label: "Services", href: "#services" },
     { label: "About", href: "#about" },
     { label: "Approach", href: "#approach" },
