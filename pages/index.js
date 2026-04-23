@@ -136,12 +136,6 @@ export default function Home() {
     };
   }, []);
 
-  return (
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Approach", href: "#approach" },
-    { label: "Contact", href: "#contact" },
-  ];
 
   const services = [
     {
