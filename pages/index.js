@@ -225,14 +225,6 @@ export default function Home() {
   }
 `}</style>
 
-        a, button, input, textarea {
-          transition: all 180ms ease;
-        }
-
-        input::placeholder,
-        textarea::placeholder {
-          color: rgba(244, 238, 227, 0.42);
-        }
 
         @keyframes fadeUp {
           from {
