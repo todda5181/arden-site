@@ -172,21 +172,22 @@ export default function Home() {
 
   return (
     <>
-      <style>{`
-        html {
-          scroll-behavior: smooth;
-        }
+<style jsx global>{`
+  html {
+    scroll-behavior: smooth;
+  }
 
-        body {
-          margin: 0;
-          background: #050505;
-          color: #f4eee3;
-          font-family: Georgia, "Times New Roman", serif;
-        }
+  body {
+    margin: 0;
+    background: #050505;
+    color: #f4eee3;
+    font-family: Georgia, "Times New Roman", serif;
+  }
 
-        * {
-          box-sizing: border-box;
-        }
+  * {
+    box-sizing: border-box;
+  }
+`}</style>
 
         a, button, input, textarea {
           transition: all 180ms ease;
