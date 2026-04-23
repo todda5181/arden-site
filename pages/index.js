@@ -536,7 +536,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section style={styles.quoteSection} className="quote-section">
+        <section style={styles.quoteSection} className="quote-section reveal">
           <div style={styles.quoteMark}>“</div>
           <p style={styles.quoteText} className="quote-text">
             Arden gives us complete peace of mind. Our home is always perfect,
@@ -545,7 +545,7 @@ export default function Home() {
           <div style={styles.quoteAttribution}>Private Client, Great Falls, VA</div>
         </section>
 
-        <section id="contact" style={styles.contactSection} className="contact-grid">
+       <section id="contact" style={styles.contactSection} className="contact-grid reveal">
           <div style={styles.contactBrandPanel}>
             <img src="/logo.png" alt="Arden logo" style={styles.contactLogo} />
             <div style={styles.contactBrandText}>
