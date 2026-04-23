@@ -541,14 +541,15 @@ export default function Home() {
           </div>
 
           <div style={styles.contactFormPanel}>
-            <div style={styles.sectionKicker}>Request Private Assessment</div>
-            <p style={styles.contactIntro}>
-              Tell us about your property and needs. A member of our team will
-              be in touch promptly.
-            </p>
+  <div style={styles.sectionKicker}>Request Private Assessment</div>
 
-  <<ContactForm />
-          </div>
+  <p style={styles.contactIntro}>
+    Tell us about your property and needs. A member of our team will
+    be in touch promptly.
+  </p>
+
+  <ContactForm />
+</div>
         </section>
 
         <footer style={styles.footer}>
