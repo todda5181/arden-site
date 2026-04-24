@@ -667,6 +667,7 @@ const globalStyles = `
   transform: translateY(0);
 }
 
+/* Buttons */
 .primary-btn {
   transition: all 0.3s ease;
 }
@@ -676,6 +677,30 @@ const globalStyles = `
   box-shadow:
     0 12px 30px rgba(198,164,108,0.22),
     0 0 18px rgba(198,164,108,0.18);
+}
+
+/* Luxury service cards */
+.luxury-service-card {
+  transition: all 0.3s ease;
+}
+
+.luxury-service-card:hover {
+  transform: translateY(-10px) scale(1.015);
+  border-color: rgba(255,218,150,0.9);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.45),
+    0 0 40px rgba(198,164,108,0.18),
+    inset 0 0 40px rgba(198,164,108,0.05);
+}
+
+/* Smooth feel across inputs */
+a, button, input, textarea {
+  transition: all 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(244,238,227,0.45);
 }
 `;
 const styles = {
