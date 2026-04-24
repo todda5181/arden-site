@@ -485,27 +485,34 @@ const navItems = [
           </div>
         </section>
 
-        <section id="services" style={styles.servicesSection}>
-          <div style={styles.sectionKickerCentered}>
-            Tailored Oversight. Total Peace of Mind.
-          </div>
-
-<section id="services" style={styles.servicesSection}>
-  <div style={styles.sectionKickerCentered}>
-    Tailored Oversight. Total Peace of Mind.
+       <section id="services" style={styles.luxuryServicesSection} className="reveal">
+  <div style={styles.servicesHeader}>
+    <div style={styles.servicesEyebrow}>Our Services</div>
+    <h2 style={styles.servicesHeadline}>
+      Tailored Oversight.
+      <br />
+      Total Peace of Mind.
+    </h2>
+    <p style={styles.servicesSubhead}>
+      Discreet. Reliable. Exceptional. Every detail handled with precision,
+      so you can focus on what truly matters.
+    </p>
   </div>
 
-  <div style={styles.servicesGrid} className="services-grid">
+  <div style={styles.luxuryServicesGrid}>
     {services.map((service) => (
       <a
         href={service.link}
         key={service.title}
-        style={{ textDecoration: "none", color: "inherit" }}
+        style={styles.luxuryServiceLink}
       >
-        <div style={styles.serviceCard} className="service-card">
-          <div style={styles.serviceIcon}>{service.icon}</div>
-          <h3 style={styles.serviceTitle}>{service.title}</h3>
-          <p style={styles.serviceText}>{service.description}</p>
+        <div style={styles.luxuryServiceCard} className="luxury-service-card">
+          <div style={styles.cardGlow} />
+          <div style={styles.luxuryServiceIcon}>{service.icon}</div>
+          <h3 style={styles.luxuryServiceTitle}>{service.title}</h3>
+          <div style={styles.cardDivider}>◇</div>
+          <p style={styles.luxuryServiceText}>{service.description}</p>
+          <div style={styles.learnMore}>Learn More →</div>
         </div>
       </a>
     ))}
