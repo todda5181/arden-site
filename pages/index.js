@@ -677,7 +677,7 @@ const globalStyles = `
     0 12px 30px rgba(198,164,108,0.22),
     0 0 18px rgba(198,164,108,0.18);
 }
-
+`;
 const styles = {
   page: {
     position: "relative",
