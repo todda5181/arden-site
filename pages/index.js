@@ -108,13 +108,12 @@ function ContactForm() {
   );
 }
 export default function Home() {
-  const navItems = [
-    { label: "Services", href: "#services" },
-    { label: "About", href: "#about" },
-    { label: "Approach", href: "#approach" },
-    { label: "Contact", href: "#contact" },
-    { label: "Estate", href: "/estate-management-northern-virginia" },
-  ];
+const navItems = [
+  { label: "Estate", href: "/estate-management-northern-virginia" },
+  { label: "Concierge", href: "/luxury-concierge-washington-dc" },
+  { label: "Home Watch", href: "/home-watch-services-great-falls-va" },
+  { label: "Contact", href: "#contact" },
+];
 
   React.useEffect(() => {
     const elements = document.querySelectorAll(".reveal");
