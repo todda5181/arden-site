@@ -490,21 +490,27 @@ const navItems = [
             Tailored Oversight. Total Peace of Mind.
           </div>
 
-{services.map((service) => (
-  <a
-    href={service.link}
-    key={service.title}
-    style={{ textDecoration: "none", color: "inherit" }}
-  >
-    <div style={styles.serviceCard} className="service-card">
-      <div style={styles.serviceIcon}>{service.icon}</div>
-      <h3 style={styles.serviceTitle}>{service.title}</h3>
-      <p style={styles.serviceText}>{service.description}</p>
-    </div>
-  </a>
-))}
-          </div>
-        </section>
+<section id="services" style={styles.servicesSection}>
+  <div style={styles.sectionKickerCentered}>
+    Tailored Oversight. Total Peace of Mind.
+  </div>
+
+  <div style={styles.servicesGrid} className="services-grid">
+    {services.map((service) => (
+      <a
+        href={service.link}
+        key={service.title}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <div style={styles.serviceCard} className="service-card">
+          <div style={styles.serviceIcon}>{service.icon}</div>
+          <h3 style={styles.serviceTitle}>{service.title}</h3>
+          <p style={styles.serviceText}>{service.description}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
 
         <section id="about" style={styles.aboutSection} className="about-grid">
           <div style={styles.aboutTextCol} className="about-copy">
