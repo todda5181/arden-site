@@ -177,8 +177,7 @@ const navItems = [
 
   return (
     <>
-return (
-  <>
+
     <style>{globalStyles}</style>
 
     <div style={styles.page}>
