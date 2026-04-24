@@ -138,38 +138,42 @@ const navItems = [
 
 
   const services = [
-    {
-      title: "Property Management",
-      description:
-        "Complete oversight of your residence, inside and out. We coordinate vendors, maintenance, and day-to-day estate operations.",
-      icon: "⌂",
-    },
-    {
-      title: "Security & Access",
-      description:
-        "Trusted access management, discreet monitoring, and thoughtful protocols to protect what matters most.",
-      icon: "◈",
-    },
-    {
-      title: "Lifestyle Concierge",
-      description:
-        "From arrivals to events, reservations to stocking, every detail is handled before you have to ask.",
-      icon: "✦",
-    },
-    {
-      title: "Estate Maintenance",
-      description:
-        "Proactive preservation of your home, systems, and grounds so everything remains in exceptional order.",
-      icon: "◇",
-          link: "/estate-management-northern-virginia",
-    },
-    {
-      title: "Vendor Management",
-      description:
-        "We vet, schedule, coordinate, and oversee trusted service partners on your behalf with precision.",
-      icon: "$",
-    },
-  ];
+  {
+    title: "Property Management",
+    description:
+      "Complete oversight of your residence, inside and out. We coordinate vendors, maintenance, and day-to-day estate operations.",
+    icon: "⌂",
+    link: "/estate-management-northern-virginia",
+  },
+  {
+    title: "Security & Access",
+    description:
+      "Trusted access management, discreet monitoring, and thoughtful protocols to protect what matters most.",
+    icon: "◆",
+    link: "/home-watch-services-great-falls-va",
+  },
+  {
+    title: "Lifestyle Concierge",
+    description:
+      "From arrivals to events, reservations to stocking, every detail is handled before you have to ask.",
+    icon: "✦",
+    link: "/luxury-concierge-washington-dc",
+  },
+  {
+    title: "Estate Maintenance",
+    description:
+      "Proactive preservation of your home, systems, and grounds so everything remains in exceptional order.",
+    icon: "◇",
+    link: "/estate-management-northern-virginia",
+  },
+  {
+    title: "Vendor Management",
+    description:
+      "We vet, schedule, coordinate, and oversee trusted service partners on your behalf with precision.",
+    icon: "$",
+    link: "/estate-management-northern-virginia",
+  },
+];
 
   return (
     <>
