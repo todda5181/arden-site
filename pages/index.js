@@ -161,6 +161,7 @@ const navItems = [
       description:
         "Proactive preservation of your home, systems, and grounds so everything remains in exceptional order.",
       icon: "◇",
+          link: "/estate-management-northern-virginia",
     },
     {
       title: "Vendor Management",
