@@ -183,178 +183,7 @@ const navItems = [
     <div style={styles.page}>
 
 
-        @keyframes fadeUp {
-          from {
-            opacity: 0;
-            transform: translateY(22px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes slowZoom {
-          from {
-            transform: scale(1.03);
-          }
-          to {
-            transform: scale(1);
-          }
-        }
-
-        .fade-up {
-          animation: fadeUp 0.9s ease forwards;
-        }
-
-        .delay-1 {
-          animation-delay: 0.08s;
-        }
-
-        .delay-2 {
-          animation-delay: 0.16s;
-        }
-
-        .delay-3 {
-          animation-delay: 0.24s;
-        }
-
-        .delay-4 {
-          animation-delay: 0.32s;
-        }
-
-        .hero-image-animate {
-          animation: slowZoom 1.6s ease forwards;
-        }
-
-        .nav-link:hover {
-          color: #c6a46c !important;
-        }
-
-        .header-btn:hover,
-        .secondary-btn:hover {
-          background: rgba(198, 164, 108, 0.1) !important;
-          transform: translateY(-1px);
-        }
-
-        .primary-btn:hover {
-          opacity: 0.92;
-          transform: translateY(-1px);
-        }
-
-        .service-card:hover {
-          background: rgba(255,255,255,0.015);
-        }
-
-        .input-field:focus,
-        .text-area:focus {
-          border-color: #c6a46c !important;
-          box-shadow: 0 0 0 1px rgba(198,164,108,0.25);
-        }
-
-        .footer-link:hover {
-          color: #c6a46c !important;
-        }
-
-        @media (max-width: 1200px) {
-          .header-grid {
-            grid-template-columns: 1fr;
-            justify-items: center;
-            gap: 18px;
-            text-align: center;
-          }
-
-          .hero-grid,
-          .about-grid,
-          .contact-grid {
-            grid-template-columns: 1fr !important;
-          }
-
-          .hero-copy {
-            padding: 56px 0 36px 0 !important;
-          }
-
-          .about-copy {
-            padding: 56px 0 !important;
-          }
-
-          .services-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
-
-          .approach-grid {
-            grid-template-columns: 1fr !important;
-          }
-
-          .hero-title {
-            font-size: 58px !important;
-          }
-
-          .section-title {
-            font-size: 52px !important;
-          }
-
-          .quote-text {
-            font-size: 28px !important;
-          }
-        }
-
-        @media (max-width: 760px) {
-          .page-shell {
-            padding: 18px 18px 40px !important;
-          }
-
-          .logo-img {
-            width: 180px !important;
-          }
-
-          .nav-wrap {
-            gap: 16px !important;
-          }
-
-          .hero-title {
-            font-size: 42px !important;
-          }
-
-          .hero-text {
-            font-size: 20px !important;
-          }
-
-          .section-title {
-            font-size: 40px !important;
-          }
-
-          .section-text {
-            font-size: 18px !important;
-          }
-
-          .quote-section {
-            padding: 44px 20px !important;
-          }
-
-          .quote-text {
-            font-size: 22px !important;
-          }
-
-          .services-grid {
-            grid-template-columns: 1fr !important;
-          }
-
-          .form-row {
-            grid-template-columns: 1fr !important;
-          }
-
-          .hero-actions {
-            flex-direction: column;
-            align-items: stretch;
-          }
-
-          .primary-btn,
-          .secondary-btn {
-            width: 100%;
-            text-align: center;
-          }
-        }
+      
       `}</style>
 
       <div style={styles.page} className="page-shell">
@@ -597,7 +426,179 @@ const navItems = [
 }
 
 const globalStyles = `
-@keyframes fadeIn {
+  @keyframes fadeUp {
+          from {
+            opacity: 0;
+            transform: translateY(22px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes slowZoom {
+          from {
+            transform: scale(1.03);
+          }
+          to {
+            transform: scale(1);
+          }
+        }
+
+        .fade-up {
+          animation: fadeUp 0.9s ease forwards;
+        }
+
+        .delay-1 {
+          animation-delay: 0.08s;
+        }
+
+        .delay-2 {
+          animation-delay: 0.16s;
+        }
+
+        .delay-3 {
+          animation-delay: 0.24s;
+        }
+
+        .delay-4 {
+          animation-delay: 0.32s;
+        }
+
+        .hero-image-animate {
+          animation: slowZoom 1.6s ease forwards;
+        }
+
+        .nav-link:hover {
+          color: #c6a46c !important;
+        }
+
+        .header-btn:hover,
+        .secondary-btn:hover {
+          background: rgba(198, 164, 108, 0.1) !important;
+          transform: translateY(-1px);
+        }
+
+        .primary-btn:hover {
+          opacity: 0.92;
+          transform: translateY(-1px);
+        }
+
+        .service-card:hover {
+          background: rgba(255,255,255,0.015);
+        }
+
+        .input-field:focus,
+        .text-area:focus {
+          border-color: #c6a46c !important;
+          box-shadow: 0 0 0 1px rgba(198,164,108,0.25);
+        }
+
+        .footer-link:hover {
+          color: #c6a46c !important;
+        }
+
+        @media (max-width: 1200px) {
+          .header-grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            gap: 18px;
+            text-align: center;
+          }
+
+          .hero-grid,
+          .about-grid,
+          .contact-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .hero-copy {
+            padding: 56px 0 36px 0 !important;
+          }
+
+          .about-copy {
+            padding: 56px 0 !important;
+          }
+
+          .services-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+
+          .approach-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .hero-title {
+            font-size: 58px !important;
+          }
+
+          .section-title {
+            font-size: 52px !important;
+          }
+
+          .quote-text {
+            font-size: 28px !important;
+          }
+        }
+
+        @media (max-width: 760px) {
+          .page-shell {
+            padding: 18px 18px 40px !important;
+          }
+
+          .logo-img {
+            width: 180px !important;
+          }
+
+          .nav-wrap {
+            gap: 16px !important;
+          }
+
+          .hero-title {
+            font-size: 42px !important;
+          }
+
+          .hero-text {
+            font-size: 20px !important;
+          }
+
+          .section-title {
+            font-size: 40px !important;
+          }
+
+          .section-text {
+            font-size: 18px !important;
+          }
+
+          .quote-section {
+            padding: 44px 20px !important;
+          }
+
+          .quote-text {
+            font-size: 22px !important;
+          }
+
+          .services-grid {
+            grid-template-columns: 1fr !important;
+          }
+
+          .form-row {
+            grid-template-columns: 1fr !important;
+          }
+
+          .hero-actions {
+            flex-direction: column;
+            align-items: stretch;
+          }
+
+          .primary-btn,
+          .secondary-btn {
+            width: 100%;
+            text-align: center;
+          }
+        }
+  @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
