@@ -1215,14 +1215,7 @@ successText: {
   fontSize: "20px",
   color: "rgba(244,238,227,0.8)",
 },
-const styles = {
-  page: { ... },
 
-  pageGlowTop: { ... },
-
-  // your existing styles...
-
-  // ✅ ADD BELOW THIS LINE
   luxuryServicesSection: {
     maxWidth: "1400px",
     margin: "0 auto",
