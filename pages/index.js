@@ -1272,4 +1272,3 @@ successText: {
     color: "#C6A46C",
   },
 };
-};
