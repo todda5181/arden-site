@@ -283,7 +283,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" style={styles.luxuryServicesSection} className="reveal">
+        <section id="services" style={styles.luxuryServicesSection}>
           <div style={styles.servicesHeader}>
             <div style={styles.servicesEyebrow}>Our Services</div>
             <h2 style={styles.servicesHeadline}>
