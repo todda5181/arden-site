@@ -1,105 +1,48 @@
-export default function EstateManagement() {
+export default function EstateManagementNorthernVirginia() {
+  return (
+    <Page
+      title="Private Estate Management in Northern Virginia"
+      kicker="Estate Management"
+      intro="Arden provides discreet, full-service estate management for exceptional homes across Northern Virginia, Washington DC, and Maryland."
+      body={[
+        ["What does private estate management include?", "Private estate management includes property oversight, vendor coordination, preventative maintenance, home readiness, emergency response, and ongoing communication with trusted service partners."],
+        ["Who is this for?", "This service is designed for high-value homeowners, frequent travelers, second-home owners, and families who expect their property to remain flawless whether they are in residence or away."],
+        ["Why Arden?", "Arden operates with discretion, consistency, and a limited client roster. We are proactive, not reactive — handling details before they become problems."],
+      ]}
+    />
+  );
+}
+
+function Page({ title, kicker, intro, body }) {
   return (
     <>
       <style jsx global>{`
-        body {
-          background: #050505;
-          color: #f4eee3;
-          font-family: Georgia, "Times New Roman", serif;
-          margin: 0;
-        }
-
-        .container {
-          max-width: 900px;
-          margin: 0 auto;
-          padding: 80px 24px;
-        }
-
-        h1 {
-          font-size: 48px;
-          margin-bottom: 20px;
-        }
-
-        h2 {
-          margin-top: 50px;
-          font-size: 26px;
-        }
-
-        p {
-          line-height: 1.7;
-          font-size: 18px;
-          color: rgba(244,238,227,0.85);
-        }
-
-        ul {
-          margin-top: 20px;
-          padding-left: 20px;
-        }
-
-        li {
-          margin-bottom: 10px;
-        }
-
-        .cta {
-          margin-top: 50px;
-          padding: 18px 28px;
-          border: 1px solid #c6a46c;
-          display: inline-block;
-          text-decoration: none;
-          color: #f4eee3;
-        }
-
-        .cta:hover {
-          background: #c6a46c;
-          color: #050505;
-        }
+        body { margin: 0; background: #050505; color: #f4eee3; font-family: Georgia, "Times New Roman", serif; }
+        .wrap { max-width: 980px; margin: 0 auto; padding: 90px 24px; }
+        .kicker { color: #c6a46c; letter-spacing: 4px; text-transform: uppercase; font-size: 12px; margin-bottom: 24px; }
+        h1 { font-size: 58px; line-height: 1.05; font-weight: 400; margin: 0 0 28px; }
+        p { font-size: 21px; line-height: 1.7; color: rgba(244,238,227,.82); }
+        h2 { margin-top: 56px; font-size: 32px; font-weight: 400; color: #f4eee3; }
+        .divider { width: 90px; height: 2px; background: #c6a46c; margin: 34px 0; }
+        .cta { display: inline-block; margin-top: 46px; padding: 16px 26px; border: 1px solid #c6a46c; color: #c6a46c; text-decoration: none; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; }
+        .cta:hover { background: #c6a46c; color: #050505; }
       `}</style>
 
-      <div className="container">
-        <h1>Private Estate Management in Northern Virginia</h1>
+      <main className="wrap">
+        <div className="kicker">{kicker}</div>
+        <h1>{title}</h1>
+        <div className="divider" />
+        <p>{intro}</p>
 
-        <p>
-          Arden provides discreet, full-service estate management for private
-          residences across Northern Virginia, Washington DC, and Maryland.
-        </p>
+        {body.map(([heading, text]) => (
+          <section key={heading}>
+            <h2>{heading}</h2>
+            <p>{text}</p>
+          </section>
+        ))}
 
-        <p>
-          We oversee every detail of your home so it is always prepared,
-          protected, and perfectly maintained.
-        </p>
-
-        <h2>What does an estate manager do?</h2>
-        <p>
-          A private estate manager ensures your property is maintained at the
-          highest standard, coordinates vendors, oversees maintenance, and
-          prepares your home for arrival at any time.
-        </p>
-
-        <ul>
-          <li>Routine property inspections</li>
-          <li>Vendor management</li>
-          <li>Preventative maintenance oversight</li>
-          <li>Pre-arrival preparation</li>
-          <li>Emergency response</li>
-        </ul>
-
-        <h2>Who requires estate management?</h2>
-        <p>
-          Estate management is ideal for second homeowners, frequent travelers,
-          and individuals who expect their home to be flawlessly maintained in
-          their absence.
-        </p>
-
-        <h2>Serving</h2>
-        <p>
-          Northern Virginia · Washington DC · Maryland  
-          (Great Falls, McLean, Arlington, Bethesda)
-        </p>
-
-        <a href="/#contact" className="cta">
-          Request Private Assessment
-        </a>
-      </div>
+        <a href="/#contact" className="cta">Request Private Assessment</a>
+      </main>
     </>
   );
 }
