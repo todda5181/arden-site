@@ -113,6 +113,7 @@ export default function Home() {
     { label: "About", href: "#about" },
     { label: "Approach", href: "#approach" },
     { label: "Contact", href: "#contact" },
+    { label: "Estate", href: "/estate-management-northern-virginia" },
   ];
 
   React.useEffect(() => {
