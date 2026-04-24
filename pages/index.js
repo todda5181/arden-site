@@ -182,10 +182,6 @@ const navItems = [
 
     <div style={styles.page}>
 
-
-      
-      `}</style>
-
       <div style={styles.page} className="page-shell">
         <div style={styles.pageGlowTop} />
         <div style={styles.pageGlowBottom} />
