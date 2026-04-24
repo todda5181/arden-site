@@ -1215,5 +1215,90 @@ successText: {
   fontSize: "20px",
   color: "rgba(244,238,227,0.8)",
 },
+const styles = {
+  page: { ... },
 
+  pageGlowTop: { ... },
+
+  // your existing styles...
+
+  // ✅ ADD BELOW THIS LINE
+  luxuryServicesSection: {
+    maxWidth: "1400px",
+    margin: "0 auto",
+    padding: "80px 0 90px",
+    borderBottom: "1px solid rgba(198,164,108,0.16)",
+  },
+
+  servicesHeader: {
+    textAlign: "center",
+    maxWidth: "820px",
+    margin: "0 auto 48px",
+  },
+
+  servicesEyebrow: {
+    color: "#C6A46C",
+    textTransform: "uppercase",
+    letterSpacing: "6px",
+    fontSize: "13px",
+    marginBottom: "22px",
+  },
+
+  servicesHeadline: {
+    fontSize: "68px",
+    lineHeight: 1.02,
+    fontWeight: 400,
+    margin: "0 0 22px",
+    color: "#F4EEE3",
+  },
+
+  servicesSubhead: {
+    fontSize: "20px",
+    lineHeight: 1.6,
+    color: "rgba(244,238,227,0.72)",
+  },
+
+  luxuryServicesGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "28px",
+  },
+
+  luxuryServiceLink: {
+    textDecoration: "none",
+    color: "inherit",
+  },
+
+  luxuryServiceCard: {
+    position: "relative",
+    padding: "42px 30px",
+    border: "1px solid rgba(198,164,108,0.65)",
+    borderRadius: "18px",
+    background: "rgba(255,255,255,0.02)",
+    textAlign: "center",
+  },
+
+  luxuryServiceIcon: {
+    fontSize: "36px",
+    marginBottom: "20px",
+    color: "#C6A46C",
+  },
+
+  luxuryServiceTitle: {
+    fontSize: "26px",
+    marginBottom: "12px",
+  },
+
+  luxuryServiceText: {
+    fontSize: "16px",
+    color: "rgba(244,238,227,0.75)",
+  },
+
+  learnMore: {
+    marginTop: "16px",
+    fontSize: "12px",
+    letterSpacing: "2px",
+    color: "#C6A46C",
+  },
+};
 };
