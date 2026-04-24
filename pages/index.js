@@ -177,58 +177,11 @@ const navItems = [
 
   return (
     <>
-<style jsx global>{`
-  html {
-    scroll-behavior: smooth;
-  }
+return (
+  <>
+    <style>{globalStyles}</style>
 
-  body {
-    margin: 0;
-    background: #050505;
-    color: #f4eee3;
-    font-family: Georgia, "Times New Roman", serif;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-
-  a, button, input, textarea {
-    transition: all 180ms ease;
-  }
-
-  input::placeholder,
-  textarea::placeholder {
-    color: rgba(244, 238, 227, 0.42);
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .primary-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(198,164,108,0.25);
-  }
-`}</style>
+    <div style={styles.page}>
 
 
         @keyframes fadeUp {
