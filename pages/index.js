@@ -15,7 +15,8 @@ export default function Home() {
             <h3>{s.title}</h3>
             <p>{s.description}</p>
           </div>
-        ))}
+               ))}
       </div>
+    </div>
   );
 }
