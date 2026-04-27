@@ -9,7 +9,14 @@ export default function Home() {
     <div style={{ padding: "60px", color: "white", background: "#050505", minHeight: "100vh" }}>
       <h1>TEST CLEAN BUILD</h1>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "28px",
+    marginTop: "40px"
+  }}
+>
         {services.map((s) => (
 <div
   key={s.title}
