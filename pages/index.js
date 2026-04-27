@@ -234,6 +234,10 @@ export default function Home() {
       <style>{globalStyles}</style>
 
       <div style={styles.page} className="page-shell">
+      <div style={{ color: "red", fontSize: "40px", zIndex: 9999, position: "relative" }}>
+    TEST LIVE
+  </div>
+      
         <div style={styles.pageGlowTop} />
         <div style={styles.pageGlowBottom} />
 
