@@ -283,34 +283,29 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="services" style={styles.luxuryServicesSection}>
-          <div style={styles.servicesHeader}>
-            <div style={styles.servicesEyebrow}>Our Services</div>
-            <h2 style={styles.servicesHeadline}>
-              Tailored Oversight.
-              <br />
-              Total Peace of Mind.
-            </h2>
-            <p style={styles.servicesSubhead}>
-              Discreet. Reliable. Exceptional. Every detail handled with precision, so you can focus on what truly matters.
-            </p>
-          </div>
+       <section id="services" style={styles.luxuryServicesSection}>
+  <div style={styles.servicesHeader}>
+    <div style={styles.servicesEyebrow}>Our Services</div>
+    <h2 style={styles.servicesHeadline}>
+      Tailored Oversight.
+      <br />
+      Total Peace of Mind.
+    </h2>
+    <p style={styles.servicesSubhead}>
+      Discreet. Reliable. Exceptional. Every detail handled with precision, so you can focus on what truly matters.
+    </p>
+  </div>
 
-          <div style={styles.luxuryServicesGrid} className="luxury-services-grid">
-            {services.map((service) => (
-              <a href={service.link} key={service.title} style={styles.luxuryServiceLink}>
-                <div style={styles.luxuryServiceCard} className="luxury-service-card">
-                  <div style={styles.cardGlow} />
-                  <div style={styles.luxuryServiceIcon}>{service.icon}</div>
-                  <h3 style={styles.luxuryServiceTitle}>{service.title}</h3>
-                  <div style={styles.cardDivider}>◇</div>
-                  <p style={styles.luxuryServiceText}>{service.description}</p>
-                  <div style={styles.learnMore}>Learn More →</div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
+  <div style={{ color: "red", fontSize: "30px" }}>
+    Services count: {services.length}
+  </div>
+
+  <div style={styles.luxuryServicesGrid} className="luxury-services-grid">
+    {services.map((service) => (
+      ...
+    ))}
+  </div>
+</section>
 
         <section id="about" style={styles.aboutSection} className="about-grid">
           <div style={styles.aboutTextCol} className="about-copy">
