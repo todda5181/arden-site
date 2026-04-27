@@ -11,7 +11,19 @@ export default function Home() {
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
         {services.map((s) => (
-          <div key={s.title} style={{ border: "1px solid gold", padding: "20px" }}>
+<div
+  key={s.title}
+  style={{
+    position: "relative",
+    padding: "42px 30px",
+    border: "1px solid rgba(198,164,108,0.65)",
+    borderRadius: "18px",
+    background: "rgba(255,255,255,0.02)",
+    transition: "all 0.35s ease",
+    cursor: "pointer"
+  }}
+  className="service-card"
+>
             <h3>{s.title}</h3>
             <p>{s.description}</p>
           </div>
