@@ -299,6 +299,34 @@ export default function Home() {
             Request Private Assessment
           </a>
         </section>
+              <section style={{ padding: "100px 40px" }}>
+  <h2 style={{ fontSize: "48px", marginBottom: "40px" }}>
+    Our Services
+  </h2>
+
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(3, 1fr)",
+      gap: "28px",
+    }}
+  >
+    {services.map((s) => (
+      <div
+        key={s.title}
+        style={{
+          padding: "40px",
+          border: "1px solid rgba(198,164,108,0.5)",
+          borderRadius: "16px",
+          background: "rgba(255,255,255,0.02)",
+        }}
+      >
+        <h3>{s.title}</h3>
+        <p>{s.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
 
         <section className="services" id="services">
           <div className="eyebrow">Our Services</div>
