@@ -9,7 +9,7 @@ export default function PrivateClientIntake() {
 
     const formData = new FormData(e.target);
 
-    const response = await fetch("https://formspree.io/f/mzdykgry", {
+    const response = await https://formspree.io/f/xojreojj, {
       method: "POST",
       body: formData,
       headers: { Accept: "application/json" },
