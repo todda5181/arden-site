@@ -9,7 +9,7 @@ export default function PrivateClientIntake() {
 
     const formData = new FormData(e.target);
 
-    const response = await https://formspree.io/f/xojreojj, {
+    const response = await fetch("https://formspree.io/f/xojreojj", {
       method: "POST",
       body: formData,
       headers: { Accept: "application/json" },
@@ -33,26 +33,12 @@ export default function PrivateClientIntake() {
   }
 
   return (
-    <div
-      style={{
-        background: "#050505",
-        color: "#f4eee3",
-        minHeight: "100vh",
-        padding: "80px 20px",
-        textAlign: "center",
-      }}
-    >
+    <div style={{ background: "#050505", color: "#f4eee3", minHeight: "100vh", padding: "80px 20px", textAlign: "center" }}>
       <h1 style={{ marginBottom: "20px" }}>Private Client Intake</h1>
 
       <form
         onSubmit={handleSubmit}
-        style={{
-          maxWidth: "600px",
-          margin: "0 auto",
-          display: "flex",
-          flexDirection: "column",
-          gap: "16px",
-        }}
+        style={{ maxWidth: "600px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "16px" }}
       >
         <input name="name" placeholder="Full Name" required style={input} />
         <input name="email" type="email" placeholder="Email" required style={input} />
