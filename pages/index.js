@@ -279,8 +279,18 @@ export default function Home() {
 
       <main className="page">
         <section className="hero">
-          <div className="logo">ARDEN</div>
-          <div className="sublogo">Estate Concierge</div>
+<div style={{ marginBottom: "40px" }}>
+  <img
+    src="/logo.png"
+    alt="Arden Concierge"
+    style={{
+      width: "260px",
+      height: "auto",
+      display: "block",
+      filter: "drop-shadow(0 10px 30px rgba(198,164,108,0.15))"
+    }}
+  />
+</div>
 
           <h1 className="hero-title">
             Everything Handled.
