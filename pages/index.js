@@ -88,7 +88,7 @@ export default function Home() {
           color: #c6a46c;
         }
 
-        .logo-img {
+        .logo-png {
           width: 230px;
           height: auto;
           display: block;
