@@ -63,12 +63,13 @@ export default function PrivateClientIntake() {
           border-bottom: 1px solid rgba(198,164,108,0.18);
         }
 
-        .logo-img {
-          width: 220px;
-          height: auto;
-          display: block;
-          filter: drop-shadow(0 10px 30px rgba(198,164,108,0.15));
-        }
+   .logo-img {
+  width: 280px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 40px rgba(198,164,108,0.18));
+}
 
         .back {
           color: rgba(244,238,227,0.72);
