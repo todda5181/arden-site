@@ -275,7 +275,17 @@ export default function PrivateClientIntake() {
       <main className="page">
         <nav className="nav">
           <a href="/">
-            <img src="/logo.png" alt="Arden Concierge" className="logo-img" />
+         <img
+  src="/logo.png"
+  alt="Arden Concierge"
+  className="logo-img"
+  style={{
+    width: "280px",
+    height: "auto",
+    display: "block",
+    filter: "drop-shadow(0 12px 36px rgba(198,164,108,0.18))"
+  }}
+/>
           </a>
 
           <a href="/" className="back">
