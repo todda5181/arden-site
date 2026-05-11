@@ -277,9 +277,9 @@ export default function PrivateClientIntake() {
         <nav className="nav">
           <a href="/">
          <img
-  src="/logo.png"
+src="/logo.png?v=2"
   alt="Arden Concierge"
-  className="logo-img"
+  className="logo-png"
   style={{
     width: "280px",
     height: "auto",
