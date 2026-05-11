@@ -403,7 +403,7 @@ export default function Home() {
       <main className="page">
         <nav className="nav">
           <a href="/">
-            <img src="/logo.png" alt="Arden Concierge" className="logo-img" />
+            <img src="/logo.png" alt="Arden Concierge" className="logo-png" />
           </a>
 
           <div className="nav-links">
