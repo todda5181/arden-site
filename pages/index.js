@@ -95,6 +95,11 @@ export default function Home() {
           <div className="heroImage heroImageOne" />
           <div className="heroOverlay" />
           <div className="heroContent">
+            <img
+              src="/logo.png"
+              alt="Arden Concierge"
+              className="heroLogo"
+            />
             <p className="eyebrow">Northern Virginia · Washington DC · Maryland</p>
             <h1>Estate Management for Homes That Demand More Than Maintenance.</h1>
             <p className="heroText">
@@ -346,7 +351,7 @@ const globalStyles = `
   }
 
   .heroImageOne {
-    background-image: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=85");
+    background-image: url("/luxury-exterior.jpg");
   }
 
   .heroOverlay {
@@ -355,6 +360,19 @@ const globalStyles = `
     background:
       linear-gradient(90deg, rgba(11, 11, 10, 0.92) 0%, rgba(11, 11, 10, 0.68) 42%, rgba(11, 11, 10, 0.28) 100%),
       linear-gradient(180deg, rgba(11, 11, 10, 0.2) 0%, rgba(11, 11, 10, 0.92) 100%);
+  }
+
+  .heroContent {
+    position: relative;
+    max-width: 820px;
+    animation: fadeUp 0.9s ease both;
+  }
+
+  .heroLogo {
+    width: 260px;
+    max-width: 75%;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 10px 30px rgba(198,164,108,0.35));
   }
 
   .heroContent {
@@ -506,15 +524,15 @@ const globalStyles = `
   }
 
   .imageInterior {
-    background-image: url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1600&q=85");
+    background-image: url("/luxury-interior.jpg");
   }
 
   .imageExterior {
-    background-image: url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1600&q=85");
+    background-image: url("/luxury-home.jpg");
   }
 
   .imageArrival {
-    background-image: url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=85");
+    background-image: url("/arrival-ready.jpg");
   }
 
   .servicesSection {
@@ -790,3 +808,4 @@ const globalStyles = `
     }
   }
 `;
+
