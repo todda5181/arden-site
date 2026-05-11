@@ -305,6 +305,19 @@ export default function Home() {
             the people who own them.
           </p>
 
+              <div style={{ marginTop: "50px" }}>
+  <img
+    src="/hero-estate.jpg"
+    alt="Luxury estate exterior"
+    style={{
+      width: "100%",
+      borderRadius: "18px",
+      objectFit: "cover",
+      boxShadow: "0 30px 80px rgba(0,0,0,0.45)",
+      border: "1px solid rgba(198,164,108,0.2)"
+    }}
+  />
+</div>
           <a href="#contact" className="cta">
             Request Private Assessment
           </a>
