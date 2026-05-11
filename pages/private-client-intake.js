@@ -1,61 +1,26 @@
 import React, { useState } from "react";
 
-export default function PrivateClientIntake() {
-  const [status, setStatus] = useState("idle");
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("loading");
-
-    const formData = new FormData(e.target);
-
-    const response = await fetch("https://formspree.io/f/xojreojj", {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (response.ok) {
-      setStatus("success");
-      e.target.reset();
-    } else {
-      setStatus("error");
-    }
-  };
-
-  if (status === "success") {
-    return (
-      <>
-        <style>{globalStyles}</style>
-
-        <div className="page">
-          <div className="success-box">
-            <div className="success-kicker">Request Received</div>
-
-            <h1 className="success-title">
-              Thank You.
-            </h1>
-
-            <div className="divider" />
-
-            <p className="success-copy">
-              Your private intake request has been received.
-              A member of the Arden team will contact you shortly.
-            </p>
-
-            <a href="/" className="back-link">
-              Return Home →
-            </a>
-          </div>
-        </div>
-      </>
-    );
+const globalStyles = `
+  body {
+    margin: 0;
+    background: #050505;
+    color: #f4eee3;
+    font-family: Georgia, "Times New Roman", serif;
   }
 
-  return (
-    <>
-      <style>{globalStyles}</style>
+  .page {
+    min-height: 100vh;
+    padding: 60px 24px;
+    background:
+      radial-gradient(circle at top left, rgba(198,164,108,0.12), transparent 32%),
+      linear-gradient(180deg, #050505 0%, #090909 100%);
+  }
 
-      <
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    border: 1px solid rgba(198,164,108,0.22);
+    background: rgba(255,255,255,0.02);
+    padding: 60px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+ 
