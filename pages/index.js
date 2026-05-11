@@ -352,6 +352,70 @@ export default function Home() {
           </div>
         </section>
 
+            <section
+  style={{
+    maxWidth: "1400px",
+    margin: "0 auto",
+    padding: "80px 0",
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "50px",
+    alignItems: "center"
+  }}
+>
+  <div>
+    <div
+      style={{
+        color: "#C6A46C",
+        letterSpacing: "4px",
+        textTransform: "uppercase",
+        fontSize: "12px",
+        marginBottom: "20px"
+      }}
+    >
+      Discreet. Reliable. Exceptional.
+    </div>
+
+    <h2
+      style={{
+        fontSize: "64px",
+        lineHeight: "1.02",
+        fontWeight: 400,
+        marginBottom: "30px"
+      }}
+    >
+      Your Property.
+      <br />
+      Our Priority.
+    </h2>
+
+    <p
+      style={{
+        fontSize: "22px",
+        lineHeight: "1.7",
+        color: "rgba(244,238,227,0.75)"
+      }}
+    >
+      Arden ensures your home is maintained, protected,
+      and prepared at all times — whether you are in residence,
+      traveling internationally, or away for the season.
+    </p>
+  </div>
+
+  <div>
+    <img
+      src="/interior.jpg"
+      alt="Luxury interior"
+      style={{
+        width: "100%",
+        borderRadius: "18px",
+        objectFit: "cover",
+        boxShadow: "0 30px 80px rgba(0,0,0,0.45)",
+        border: "1px solid rgba(198,164,108,0.2)"
+      }}
+    />
+  </div>
+</section>
         <section className="contact" id="contact">
           <h2>Request a Private Assessment</h2>
           <p>
