@@ -498,7 +498,7 @@ export default function Home() {
         </section>
 
         <section className="contact" id="contact">
-          <h2>Request a Private Assessment</h2>
+          <h2>Begin with the Arden Estate Assessment™</h2>
 
           <p>
             Arden works with a limited number of private clients to ensure the
