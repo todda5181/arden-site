@@ -506,18 +506,18 @@ export default function Home() {
           <img src="/interior.jpg" alt="Luxury interior" className="interior" />
         </section>
 
-        <section className="contact" id="contact">
-          <h2>Begin with the Arden Estate Assessment™</h2>
+       <section className="contact" id="contact">
+  <h2>Begin with the Arden Estate Assessment™</h2>
 
-          <p>
-            Arden works with a limited number of private clients to ensure the
-            highest level of discretion, responsiveness, and service.
-          </p>
+  <p>
+    Arden works with a limited number of private clients to ensure the
+    highest level of discretion, responsiveness, and service.
+  </p>
 
-          <a href="/private-client-intake" className="cta">
-            Begin Private Intake
-          </a>
-        </section>
+  <a href="/private-client-intake" className="cta">
+    Begin Private Intake
+  </a>
+</section>
 
         <footer className="footer">
           <div>© 2026 Arden Concierge. All rights reserved.</div>
