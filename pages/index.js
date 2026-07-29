@@ -406,12 +406,21 @@ export default function Home() {
             <img src="/logo.png" alt="Arden Concierge" className="logo-png" />
           </a>
 
-          <div className="nav-links">
-            <a href="/estate-management-northern-virginia">Estate</a>
-            <a href="/luxury-concierge-washington-dc">Concierge</a>
-            <a href="/home-watch-services-great-falls-va">Home Watch</a>
-            <a href="/private-client-intake">Private Intake</a>
-          </div>
+        <div className="nav-links">
+  <a href="/estate-management-northern-virginia">Estate Management</a>
+
+  <a href="/arden-estate-assessment">
+    Estate Assessment
+  </a>
+
+  <a href="/service-areas">
+    Service Areas
+  </a>
+
+  <a href="/private-client-intake">
+    Private Intake
+  </a>
+</div>
         </nav>
 
         <section className="hero">
